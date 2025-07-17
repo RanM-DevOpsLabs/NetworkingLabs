@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  ssh-server-1:
+    build: .
+    container_name: ssh-server-1
+    ports:
+      - "2223:22"
+    networks:
+      - ssh-net
+  
+  ssh-server-2:
+    build: .
+    container_name: ssh-server-2
+    ports:
+      - "2223:22"
+    networks:
+      - ssh-net
+
+  ssh-client:
+    build: .
+    container_name: ssh-client
+    stdin_open: true
+    tty: true
+    networks:
+      - ssh-net
+
+networks:
+  ssh-net:
