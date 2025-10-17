@@ -2,6 +2,30 @@
 
 This guide demonstrates how to set up SSH key-based authentication between containers using public/private key pairs, based on a practical Docker lab environment.
 
+## About SSH authentication
+
+Secure Shell (SSH) authentication is a method of securely communicating between a client and a server. All data that is being transferred on SSH is encrypted, thus preventing it from being stolen if someone eavesdrops on it. 
+
+SSH provides several authentication methods, 
+
+1. Public Key Authentication - this is the most common and secure:
+   - Public and private keys are being generated
+   - Public key is being installed onto the remote server
+   - Private key is being used by the client to authenticate with the remote server
+   - Authentication will be successful only if the client has the private key that matches the server public key
+  
+     
+3. Password Authentication
+   A regular username and password authentication  - this would be considered a less secure then ssh keys, and it is less convenient as client has to pass credentials with every new communication session
+   
+5. Certificate based authentication
+   Similar to ssh keys authentication but commonly used on a larger scale - providing a centrelized place for managing the private and public keys (a certificte authority) - which is acts as a 3rd party for distributing keys between multiple clients and servers.
+   
+7. Multi-Factor Authentication
+   SSH also supports using two or more authentication methods in combination, such as requiring both a password and an SSH key. This adds an extra layer of security, ensuring that even if one factor is compromised, access remains restricted
+
+In this practice we'll go through the first - public key authentication method.
+
 ## Table of Contents
 1. [Overview](#overview)
 2. [Prerequisites](#prerequisites)
