@@ -168,7 +168,7 @@ ssh-add -l
 
 **Expected output:**
 ```
-256 SHA256:QYxdusIHaTHCsMrwLI8G6z+0zlkthbljIgqhtoriJ5k dev@client:server-1 (ED25519)
+256 SHA256:<YOUT_PUB_KEY_HASH_HERE> dev@client:server-1 (ED25519)
 ```
 
 ## Step 4: Connect to Server
