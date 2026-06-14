@@ -118,7 +118,7 @@ chmod 700 /home/dev/.ssh
 
 ### 2.5 Add Public Key to Authorized Keys
 ```bash
-echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA+dw82TYYS3AM6kkyUNDsBfdACjIJPHznCYXaksFj3B dev@client:server-1" >> /home/dev/.ssh/authorized_keys
+echo "ssh-ed25519 <YOUR_GENERATED_PUB_KEY_HASH_HERE> dev@client:server-1" >> /home/dev/.ssh/authorized_keys
 ```
 
 **Important:** Replace the key string with your actual public key from Step 1.3.
