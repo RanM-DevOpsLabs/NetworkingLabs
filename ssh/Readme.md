@@ -85,7 +85,7 @@ cat ~/.ssh/id_ed25519.pub
 
 **Sample output:**
 ```
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA+dw82TYYS3AM6kkyUNDsBfdACjIJPHznCYXaksFj3B dev@client:server-1
+ssh-ed25519 <YOUR_GENERATED_PUB_KEY_HASH_HERE> dev@client:server-1
 ```
 
 **Copy this entire line** - you'll need it for server configuration.
